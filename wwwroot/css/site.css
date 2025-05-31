@@ -1,0 +1,108 @@
+html {
+  font-size: 14px;
+}
+/* Hover effect for links in navigation */
+.navbar-nav .nav-link {
+  color: #0077cc; /* Default color for nav links */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ff6f61; /* Change color on hover */
+  text-decoration: underline; /* Underline the link text on hover */
+}
+
+/* Active state for the nav link */
+.navbar-nav .nav-link.active {
+  color: #1b6ec2; /* Active link color */
+}
+
+/* Hover effect on navbar brand */
+.navbar-brand:hover {
+  color: #ff6f61; /* Change navbar brand color on hover */
+  text-decoration: underline; /* Underline the navbar brand on hover */
+}
+
+/* Optional: Adding a subtle background color change on hover */
+.navbar-nav .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+  border-radius: 5px; /* Optional: Add a rounded effect to the background */
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+    font-family:sans-serif;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+/* wwwroot/css/custom-styles.css */
+
+/* Styling for the Top Bar */
+.topbar {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+}
+
+/* Styling for the FCG logo in the Top Bar */
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Styling for the Search Bar */
+.search-bar {
+    max-width: 500px;
+}
+
+/* Styling for the Profile Icon */
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    background-color: #f8f9fa;
+    padding: 15px;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Main Content Styling */
+.main-content {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}

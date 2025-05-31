@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FCG</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/custom-styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+   <div class="container-fluid">
+    <!-- Topbar with Navbar, FCG, Search bar, and Profile icon -->
+    <div class="row topbar align-items-center py-2 px-3">
+        <!-- FCG Logo in the Topbar -->
+        <div class="col-md-6">
+            <a class="navbar-brand" href="#">FCG</a>
+        </div>
+        <!-- Search bar -->
+        <div class="col-md-4">
+            <form class="d-flex" role="search">
+                <input class="form-control me-2 search-bar" type="search" placeholder="Search..." aria-label="Search">
+                <button class="btn btn-outline-primary" type="submit">Search</button>
+            </form>
+        </div>
+        <!-- Profile icon with dropdown -->
+        <div class="col-md-2 text-end">
+            <div class="dropdown">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Profile" class="profile-icon" data-bs-toggle="dropdown" aria-expanded="false" />
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="/Account/Login">Login</a></li>
+                    <li><a class="dropdown-item" href="/Account/Register">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <!-- Sidebar and Main Content -->
+        <div class="row min-vh-100">
+            <!-- Sidebar -->
+            <aside class="col-md-3 col-lg-2 sidebar border-end p-3">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                    </li>
+                    <li class="nav-item" >
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                    <partial name="_LoginPartial" />
+                    </li>
+                </ul>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="col-md-9 col-lg-10 main-content p-4">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto">
+        <div class="container">
+            &copy; 2025 - FCG - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
