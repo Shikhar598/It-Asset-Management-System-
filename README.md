@@ -1,0 +1,3 @@
+Builta role-basedwebapplication tomanageITassets,implementing CRUDoperations, user
+authentication,and logging.Utilized Grid-View, Drop-DownList,andothercontrolsforafunctionaluser
+interface.Enabledassetassignment,tracking,andreportingacrossuserroles(Admin,ITStaff,Employee).
